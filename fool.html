@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #ff1a55;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .menu-icon {
+            font-size: 24px;
+            color: white;
+        }
+        .breadcrumb {
+            background-color: #f0e0e0;
+            padding: 15px 20px;
+            font-size: 14px;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: #333;
+        }
+        .main-content {
+            padding: 0;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .title {
+            background-color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+            text-align: center;
+        }
+        .form-container {
+            background-color: #d9edf7;
+            padding: 20px 15px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .form-label {
+            width: 120px;
+            text-align: right;
+            padding-right: 10px;
+        }
+        .form-input {
+            flex: 1;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .captcha-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .captcha-image {
+            background-color: #333;
+            color: white;
+            font-size: 24px;
+            padding: 10px 20px;
+            margin: 10px 0;
+            letter-spacing: 5px;
+            font-family: 'Courier New', monospace;
+        }
+        .captcha-refresh {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .captcha-refresh a {
+            color: #0088cc;
+            text-decoration: none;
+        }
+        .submit-button {
+            text-align: center;
+            margin-top: 15px;
+        }
+        button {
+            padding: 8px 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #000;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .status-bar {
+            background-color: #0d1b20;
+            color: white;
+            padding: 5px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+        .browser-bar {
+            background-color: #0d1b20;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        .url-bar {
+            background-color: #22373f;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 0 10px;
+            flex: 1;
+        }
+        .tab-icons {
+            display: flex;
+        }
+        .empty-space {
+            height: 150px;
+        }
+        
+        /* Styles for the meme result page */
+        #resultsPage {
+            display: none;
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+        }
+        .meme-container {
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        .meme-container img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .prank-message {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #ff1a55;
+        }
+        .back-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="status-bar">
+        <div>00:03 ✉ m</div>
+        <div>📱 📶 📶 📱 🔋 20%</div>
+    </div>
+    
+    <div class="browser-bar">
+        <div>🏠</div>
+        <div class="url-bar">🔒 auniversity-ac.in</div>
+        <div>+</div>
+        <div>33</div>
+        <div>⋮</div>
+    </div>
+    
+    <div class="header">
+        <div class="menu-icon">☰</div>
+    </div>
+    
+    <div class="breadcrumb">
+        <span>Home</span> » <span>RESULTS</span>
+    </div>
+    
+    <!-- Login Form Page -->
+    <div id="loginPage" class="main-content">
+        <div class="title">I/IV B.PHARMACY I SEMESTER SUPPLY EXAMINATIONS JANUARY-2022 RESULTS</div>
+        
+        <div class="form-container">
+            <form id="resultsForm">
+                <div class="form-group">
+                    <div class="form-label">Hall Ticket Number:</div>
+                    <div class="form-input">
+                        <input type="text" id="hallTicket" name="hallTicket">
+                    </div>
+                </div>
+                
+                <div class="captcha-container">
+                    <div class="captcha-image">vkh3qh</div>
+                    <div class="captcha-refresh">
+                        Can't read the image? click <a href="#" id="refreshCaptcha">here</a> to refresh.
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Enter Captcha:</div>
+                    <div class="form-input">
+                        <input type="text" id="captcha" name="captcha" placeholder="Enter the above code">
+                    </div>
+                </div>
+                
+                <div class="submit-button">
+                    <button type="button" id="submitBtn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Meme Results Page -->
+    <div id="resultsPage" class="main-content">
+        <div class="title">EXAMINATION RESULTS</div>
+        
+        <div class="form-container">
+            <div class="prank-message">GOTCHA! 😂</div>
+            
+            <div class="meme-container">
+                <img src="/api/placeholder/400/320" alt="Funny meme" id="memeImage">
+            </div>
+            
+            <div class="submit-button">
+                <button class="back-button" id="backBtn">Go Back</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="empty-space"></div>
+    
+    <div class="footer">
+        © 2020 ANU. All Rights Reserved |
+    </div>
+
+    <script>
+        // Meme image URLs (replace with actual meme URLs in a real implementation)
+        const memeImages = [
+            "https://i.imgflip.com/3p1a1j.jpg", 
+            "https://i.imgflip.com/5ywvj7.jpg",
+            "https://i.imgflip.com/51s5.jpg"
+        ];
+        
+        // Add functionality for the submit button
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const hallTicket = document.getElementById('hallTicket').value;
+            const captcha = document.getElementById('captcha').value;
+            
+            if (!hallTicket) {
+                alert("Please enter your Hall Ticket Number");
+                return;
+            }
+            
+            if (!captcha) {
+                alert("Please enter the Captcha code");
+                return;
+            }
+            
+            // Hide login page and show results page with meme
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('resultsPage').style.display = 'block';
+            
+            // Set a random meme image
+            // Note: In the Claude environment, we can't display external images
+            // So we're using a placeholder. In a real implementation, you would 
+            // uncomment this line and use actual meme URLs:
+            // document.getElementById('memeImage').src = memeImages[Math.floor(Math.random() * memeImages.length)];
+        });
+        
+        // Add functionality for back button
+        document.getElementById('backBtn').addEventListener('click', function() {
+            document.getElementById('resultsPage').style.display = 'none';
+            document.getElementById('loginPage').style.display = 'block';
+        });
+        
+        // Add functionality for refreshing captcha
+        document.getElementById('refreshCaptcha').addEventListener('click', function(e) {
+            e.preventDefault();
+            const captchas = ['vkh3qh', 'p7x2zf', 'a4bd9j', 'm5n2rt'];
+            const randomCaptcha = captchas[Math.floor(Math.random() * captchas.length)];
+            document.querySelector('.captcha-image').textContent = randomCaptcha;
+        });
+    </script>
+</body>
+</html>
